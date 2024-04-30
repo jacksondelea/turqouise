@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Exhibition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <a href="index.html" style="text-decoration:none; font-size: 36px; color: black;">Turquoise</a>
+    </div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="images/landing.jpg" alt="Landing Image" class="exhibition-img" id="img1">
+            <img src="images/current1.jpg" alt="Current Exhibition Image 1" class="exhibition-img" id="img2" style="display:none;">
+            <img src="images/current2.jpg" alt="Current Exhibition Image 2" class="exhibition-img" id="img3" style="display:none;">
+        </div>
+    </div>
+    <div class="text-container" style="max-width: 720px; align-self: center;">
+        <span>Installation view</span>
+        <span class="toggle-text underline" onclick="toggleText()">Text</span>
+    </div>
+    <p id="more-text" style="display:none;">Extended information about the current exhibition goes here...</p>
+    <p style="font-weight: bold;">Douglas Henderson</p>
+    <p>October 26th - November 10th, 2024.</p>
+
+
+    <script>
+        function toggleText() {
+            var text = document.getElementById('more-text');
+            if (text.style.display === "none") {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.exhibition-img');
+        setInterval(() => {
+            images[currentIndex].style.opacity = 0; // Start fade out
+            currentIndex = (currentIndex + 1) % images.length; // Move to next image
+            images[currentIndex].style.display = 'block'; // Prepare next image
+            images[currentIndex].style.opacity = 1; // Fade in next image
+        }, 7000);
+
+        window.onload = () => {
+            images.forEach(img => {
+                img.style.transition = 'opacity 1s ease-in-out';
+                img.style.position = 'absolute';
+                img.style.top = 0;
+            });
+            images[0].style.display = 'block'; // Display the first image
+            images[0].style.opacity = 1;
+        };
+    </script>
+</body>
+</html>
