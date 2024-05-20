@@ -1,30 +1,49 @@
 body {
     font-family: 'Times New Roman', serif;
     padding: 20px;
+    padding-bottom: 0px;
     line-height: 1.1;
+    position: fixed;
 }
 
-.carousel-container {
-    position: relative;
-    width: 720px; 
-    height: 480px; /* Set a fixed height based on your images' aspect ratio */
-    overflow: hidden;
+.sticky-logo {
+    position: sticky;
+    top: 0;
+    background: white; /* Optional: to ensure the background is consistent */
+    z-index: 1000;
+    padding: 10px 0;
 }
 
-.carousel {
-    width: 100%;
-    max-width: 95vw;
-    height: 100%;
+.left-container {
     position: relative;
+    width: 720px;
+    height: auto;
+    overflow-y: scroll; /* Allow scrolling within this container */
+    max-height: 85vh; /* Optional: to limit the height and make it scrollable */ 
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+.left-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
 }
 
 .exhibition-img {
     width: 100%;
     height: auto;
-    position: absolute;
-    opacity: 0; /* All images start fully transparent */
-    transition: opacity 1s ease-in-out;
-    display: block; /* Images need to be set to block to manage visibility */
+    max-height: 90vh;
+}
+
+.thomas-container {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+.thomas-img {
+    height: 100%;
 }
 
 .text-container {
@@ -38,10 +57,13 @@ body {
 
 .toggle-text {
     cursor: pointer;
+    color: black; /* Default color */
+    text-decoration: none; /* Remove underline by default */
 }
 
-.toggle-text:hover{
-    color: turquoise;
+.toggle-text:hover {
+    color: turquoise; /* Color on hover */
+    text-decoration: underline; /* Underline on hover */
 }
 
 header h1 {
@@ -75,25 +97,18 @@ nav ul li a:hover, nav ul li a:focus {
 
 .header-img {
     display: block;
-    width: 400px; 
+    width: 400px;
     height: auto;
     margin-left: 0;
     margin-top: 10px;
 }
 
-.exhibition-img {
-    display: block;
-    width: 720px; /* Increased width by 20% from 300px to 360px */
-    height: auto;
-    margin-left: 0;
-    margin-top: 10px;
-}
 hr {
     border: none;
     height: 1px;
     background-color: black;
     margin-top: 10px;
-    width: 400px; /* Match the width of the image above */
+    width: 400px;
     margin-left: 0;
 }
 
@@ -110,14 +125,16 @@ nav ul {
 .current-container {
     display: flex;
     flex-direction: row;
-    width: 100%;  /* Ensure full width */
+    width: 100%;
 }
 
 .right-container {
     display: flex;
-    justify-content: flex-end;
-    width: 100%;  /* Ensure this container can expand as needed */
-    margin-right: 20px;  /* Optional: if you want some spacing from the edge */
+    flex-direction: column; /* Change to column for better alignment */
+    position: sticky;
+    top: 0;
+    height: auto;
+    align-self: flex-start; /* Ensure it stays at the top */
+    margin-right: 20px;
     margin-left: 20px;
 }
-

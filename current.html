@@ -8,63 +8,27 @@
     <link rel="icon" href="/images/FAVICON Small.png" type="image/x-icon">
 </head>
 <body>
-        <div>
-            <a href="index.html" style="text-decoration:none; font-size: 32px; color: black;">Turquoise</a>
-        </div>
-        <div class="current-container">
-            <div class="left-container">
-                <div class="carousel-container">
-                    <div class="carousel">
-                        <!-- SRC BELOW = CAROUSEL IMAGES -->
-                        <img src="images/landing.jpg" alt="Landing Image" class="exhibition-img" id="img1">
-                        <img src="images/current1.jpg" alt="Current Exhibition Image 1" class="exhibition-img" id="img2" style="display:none;">
-                        <img src="images/current2.jpg" alt="Current Exhibition Image 2" class="exhibition-img" id="img3" style="display:none;">
-                    </div>
-                </div>
-                <div class="text-container" style="max-width: 720px; align-self: center;">
-                    <span>Installation view</span>
-                </div>
-                <p id="more-text" style="display:none;">Extended information about the current exhibition goes here...</p> 
-           
+    <div class="sticky-logo">
+        <a href="index.html" style="text-decoration:none; font-size: 32px; color: black;">Turquoise</a>
+    </div>
+    <div class="current-container">
+        <div class="left-container">
+            <div class="thomas-container">
+                <img src="images/doubtingthomas.jpg" alt="Landing Image" class="thomas-img">
             </div>
+            <div style="margin-top: 10px; margin-bottom: 10px;">"The Incredulity of Saint Thomas"</div>
+            <hr style="width: 100%">
+            <img src="images/current1.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+            <img src="images/current2.jpg" alt="Current Exhibition Image 2" class="exhibition-img">
+        </div>
         <div class="right-container">
             <div>
                 <div>Bryce Edwards</div>
                 <div style="font-style: italic;">Acheiropoieta</div>
                 <div>May 16 - June 20, 2024</div>
-                <span class="toggle-text underline" >Exhibition Text</span>
-            </div>   
-             
+                <a class="toggle-text underline" href="https://drive.google.com/file/d/1FBfp8_MZxStE9QjkcsFXhNSUWrkUa9th/view?usp=sharing" target="_blank">Exhibition Text</a>
+            </div>
         </div>
     </div>
-
-    <script>
-        function toggleText() {
-            var text = document.getElementById('more-text');
-            if (text.style.display === "none") {
-                text.style.display = "block";
-            } else {
-                text.style.display = "none";
-            }
-        }
-
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.exhibition-img');
-        setInterval(() => {
-            images[currentIndex].style.opacity = 0; // Start fade out
-            currentIndex = (currentIndex + 1) % images.length; // Move to next image
-            images[currentIndex].style.display = 'block'; // Prepare next image
-            images[currentIndex].style.opacity = 1; // Fade in next image
-        }, 7000);
-
-        window.onload = () => {
-            images.forEach(img => {
-                img.style.position = 'absolute';
-                img.style.top = 0;
-            });
-            images[0].style.display = 'block'; // Display the first image
-            images[0].style.opacity = 1;
-        };
-    </script>
 </body>
 </html>
