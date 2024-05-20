@@ -1,7 +1,7 @@
 body {
     font-family: 'Times New Roman', serif;
     padding: 20px;
-    line-height: 1.6;
+    line-height: 1.1;
 }
 
 .carousel-container {
@@ -75,7 +75,7 @@ nav ul li a:hover, nav ul li a:focus {
 
 .header-img {
     display: block;
-    width: 480px; /* Increased width by 20% from 300px to 360px */
+    width: 400px; 
     height: auto;
     margin-left: 0;
     margin-top: 10px;
@@ -93,7 +93,7 @@ hr {
     height: 1px;
     background-color: black;
     margin-top: 10px;
-    width: 480px; /* Match the width of the image above */
+    width: 400px; /* Match the width of the image above */
     margin-left: 0;
 }
 
@@ -118,5 +118,6 @@ nav ul {
     justify-content: flex-end;
     width: 100%;  /* Ensure this container can expand as needed */
     margin-right: 20px;  /* Optional: if you want some spacing from the edge */
+    margin-left: 20px;
 }
 
