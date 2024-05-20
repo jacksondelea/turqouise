@@ -9,7 +9,7 @@ body {
 .sticky-logo {
     position: sticky;
     top: 0;
-    background: white; /* Optional: to ensure the background is consistent */
+    background: white; 
     z-index: 1000;
     padding: 10px 0;
 }
@@ -18,8 +18,8 @@ body {
     position: relative;
     width: 720px;
     height: auto;
-    overflow-y: scroll; /* Allow scrolling within this container */
-    max-height: 85vh; /* Optional: to limit the height and make it scrollable */ 
+    overflow-y: scroll; 
+    max-height: 85vh; 
     scrollbar-width: none; /* Hide scrollbar in Firefox */
     -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
 }
@@ -57,13 +57,13 @@ body {
 
 .toggle-text {
     cursor: pointer;
-    color: black; /* Default color */
-    text-decoration: none; /* Remove underline by default */
+    color: black; 
+    text-decoration: none;
 }
 
 .toggle-text:hover {
-    color: turquoise; /* Color on hover */
-    text-decoration: underline; /* Underline on hover */
+    color: turquoise; 
+    text-decoration: underline; 
 }
 
 header h1 {
@@ -130,7 +130,7 @@ nav ul {
 
 .right-container {
     display: flex;
-    flex-direction: column; /* Change to column for better alignment */
+    flex-direction: column; 
     position: sticky;
     top: 0;
     height: auto;
