@@ -31,38 +31,46 @@ body {
     max-height: 100%; /* Ensure it takes full height */
     scrollbar-width: none; /* Hide scrollbar in Firefox */
     -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .left-container::-webkit-scrollbar {
     display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
 }
 
-.exhibition-img {
-    width: 100%;
+.exhibition-img{
+    max-width: 100%;
+    max-height: 90%;
     height: auto;
-    max-height: 90vh;
     margin-bottom: 20px;
+    object-fit: contain; /* Maintain intrinsic dimensions */
+    align-self: flex-start;
 }
 
-.exhibition-img-captioned {
-    width: 100%;
+.exhibition-img-captioned{
+    max-width: 100%;
+    max-height: 90%;
     height: auto;
-    max-height: 90vh;
-    margin-bottom: 
-    0px;
+    margin-bottom: 10px;
+    object-fit: contain; /* Maintain intrinsic dimensions */
+    align-self: flex-start;
 }
+
 
 .thomas-container {
     width: 100%;
-    height: auto;
-    max-height: 90vh;
+    max-height: 90%;
     display: flex;
     justify-content: left;
     margin-top: 10px;
 }
 
 .thomas-img {
-    height: 100%;
+    max-width: 100%;
+    max-height: 90%;
+    object-fit: contain; /* Maintain intrinsic dimensions */
 }
 
 .text-container {
@@ -116,19 +124,11 @@ nav ul li a:hover, nav ul li a:focus {
 
 .header-img {
     display: block;
-    width: 400px;
-    height: auto;
+    max-width: 100%;
+    max-height: 90%;
+    object-fit: contain; /* Maintain intrinsic dimensions */
     margin-left: 0;
     margin-top: 10px;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: black;
-    margin-top: 10px;
-    width: 400px;
-    margin-left: 0;
 }
 
 nav ul {
@@ -158,4 +158,83 @@ nav ul {
     color: black;
     padding: 3px;
     border: 1px black solid;
+}
+
+.hr{
+    border: none;
+        height: 1px;
+        background-color: black;
+        margin-top: 10px;
+        width: 385px;
+        margin-left: 0;
+}
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .left-container {
+        width: 60%;
+    }
+
+    .right-container {
+        width: 40%;
+    }
+}
+
+@media (max-width: 992px) {
+    .left-container, .right-container {
+        width: 100%;
+    }
+
+    .current-container {
+        flex-direction: column;
+    }
+
+    .right-container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-img {
+        max-height: 60vh;
+    }
+
+    .sticky-logo {
+        padding-bottom: 10px;
+    }
+
+    body {
+        padding: 10px;
+        padding-top: 20px;
+        padding-left: 15px;
+    }
+
+    .hr{
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 16px;
+        padding: 2px;
+    }
+
+    .header-img {
+        max-height: 60vh;
+    }
+
+    .sticky-logo {
+        padding-bottom: 5px;
+    }
+
+    body {
+        padding: 5px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    .hr {
+        width: 40px;
+    }
 }
