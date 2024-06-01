@@ -40,7 +40,8 @@ body {
     display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
 }
 
-.exhibition-img{
+.exhibition-img,
+.exhibition-img-captioned {
     max-width: 100%;
     max-height: 90%;
     height: auto;
@@ -48,16 +49,6 @@ body {
     object-fit: contain; /* Maintain intrinsic dimensions */
     align-self: flex-start;
 }
-
-.exhibition-img-captioned{
-    max-width: 100%;
-    max-height: 90%;
-    height: auto;
-    margin-bottom: 10px;
-    object-fit: contain; /* Maintain intrinsic dimensions */
-    align-self: flex-start;
-}
-
 
 .thomas-container {
     width: 100%;
@@ -131,6 +122,15 @@ nav ul li a:hover, nav ul li a:focus {
     margin-top: 10px;
 }
 
+.custom-hr {
+    border: none;
+    height: 1px;
+    background-color: black;
+    margin-top: 10px;
+    width: 385px;
+    margin-left: 0;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -160,14 +160,6 @@ nav ul {
     border: 1px black solid;
 }
 
-.hr{
-    border: none;
-        height: 1px;
-        background-color: black;
-        margin-top: 10px;
-        max-width: 385px;
-        margin-left: 0;
-}
 /* Responsive Styles */
 @media (max-width: 1200px) {
     .left-container {
@@ -209,8 +201,8 @@ nav ul {
         padding-left: 15px;
     }
 
-    .hr{
-        max-width: 150px;
+    .custom-hr {
+        width: 340px;
     }
 }
 
@@ -234,7 +226,7 @@ nav ul {
         padding-left: 10px;
     }
 
-    .hr {
-        width: 40px;
+    .custom-hr {
+        width: 340px;
     }
 }
