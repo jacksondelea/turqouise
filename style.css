@@ -122,6 +122,10 @@ nav ul li a:hover, nav ul li a:focus {
     margin-top: 10px;
 }
 
+.img-hr-container {
+    width: 100%;
+}
+
 .header-img {
     display: block;
     width: 100%;
