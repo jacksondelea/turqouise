@@ -56,6 +56,7 @@ body {
     display: flex;
     justify-content: left;
     margin-top: 10px;
+    margin-left: 0px;
 }
 
 .thomas-img {
@@ -113,13 +114,19 @@ nav ul li a:hover, nav ul li a:focus {
     color: turquoise;
 }
 
-.header-img {
+.image-container {
     display: block;
-    max-width: 100%;
-    max-height: 90%;
+    width: 360px;
     object-fit: contain; /* Maintain intrinsic dimensions */
     margin-left: 0;
     margin-top: 10px;
+}
+
+.header-img {
+    display: block;
+    width: 100%;
+    object-fit: contain; /* Maintain intrinsic dimensions */
+    margin-left: 0;
 }
 
 .custom-hr {
@@ -127,7 +134,7 @@ nav ul li a:hover, nav ul li a:focus {
     height: 1px;
     background-color: black;
     margin-top: 10px;
-    width: 385px;
+    width: 100%; /* Matches the width of the containing div */
     margin-left: 0;
 }
 
@@ -187,11 +194,9 @@ nav ul {
 }
 
 @media (max-width: 768px) {
-    .header-img {
-        max-height: 60vh;
-    }
 
     .sticky-logo {
+        padding-top: 5px;
         padding-bottom: 10px;
     }
 
@@ -200,33 +205,42 @@ nav ul {
         padding-top: 20px;
         padding-left: 15px;
     }
-
-    .custom-hr {
-        width: 340px;
-    }
 }
 
 @media (max-width: 576px) {
+    .current-container {
+        flex-direction: column;
+    }
+
+    .right-container {
+        order: -1; /* Move the right container above the left container */
+        position: static; /* Remove sticky positioning */
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px; /* Add some spacing */
+    }
+
+    .left-container {
+        order: 1; /* Ensure the left container is below the right container */
+    }
+
+    .image-container {
+        width: 240px;
+    }
+    
     .logo {
         font-size: 16px;
         padding: 2px;
     }
 
-    .header-img {
-        max-height: 60vh;
-    }
-
     .sticky-logo {
-        padding-bottom: 5px;
+        padding-top: 5px;
+        padding-bottom: 15px;
     }
 
     body {
         padding: 5px;
         padding-top: 10px;
         padding-left: 10px;
-    }
-
-    .custom-hr {
-        width: 340px;
     }
 }
