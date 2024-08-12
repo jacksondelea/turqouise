@@ -8,14 +8,19 @@
     <link rel="icon" href="/images/FAVICON Small.png" type="image/x-icon">
 </head>
 <body>
-    <div class="sticky-logo">
-        <a href="index.html" class="logo">Turquoise</a>
+    <div id="loading-screen" class="loading-screen">
+        <p style="color: white;">Loading...</p>
     </div>
-    <div class="image-container">
-        <!-- Container to ensure image and hr match in width -->
-        <div class="img-hr-container">
-            <a href="seancoopermain.html"><img src="images/hausman.jpg" alt="Upcoming Exhibition" class="header-img"></a>
-            <hr class="custom-hr">
+    <div id="main-content" style="display: none;">
+        <div class="sticky-logo">
+            <a href="index.html" class="logo">Turquoise</a>
+        </div>
+        <div class="image-container">
+            <!-- Container to ensure image and hr match in width -->
+            <div class="img-hr-container">
+                <a href="seancoopermain.html"><img src="images/hausman.jpg" alt="Upcoming Exhibition" class="header-img"></a>
+                <hr class="custom-hr">
+            </div>
         </div>
     </div>
     <nav>
@@ -25,5 +30,29 @@
             <li><a href="about.html">info</a></li>
         </ul>
     </nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("img");
+            let loadedCount = 0;
+            const totalImages = images.length;
+
+            images.forEach(img => {
+                if (img.complete) {
+                    incrementCounter();
+                } else {
+                    img.addEventListener("load", incrementCounter);
+                    img.addEventListener("error", incrementCounter);
+                }
+            });
+
+            function incrementCounter() {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    document.getElementById("loading-screen").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                }
+            }
+        });
+    </script>
 </body>
 </html>
