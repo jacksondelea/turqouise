@@ -7,12 +7,12 @@ body {
     overflow: hidden; /* Prevent scrolling on the body */
     padding-top: 36px;
     padding-left: 30px;
+    background-color: #ea52f3; /* Set background color */
 }
 
 .sticky-logo {
     position: sticky;
     top: 0;
-    background: white;
     z-index: 1000;
     padding: 0;
     padding-bottom: 20px;
@@ -40,12 +40,19 @@ body {
     display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
 }
 
-.exhibition-img,
-.exhibition-img-captioned {
+.exhibition-img{
     max-width: 100%;
     max-height: 90%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    object-fit: contain; /* Maintain intrinsic dimensions */
+    align-self: flex-start;
+}
+.exhibition-img-captioned {
+    max-width: 100%;
+    max-height: 90%;
+    margin-bottom: 10px;
+    height: auto;
     object-fit: contain; /* Maintain intrinsic dimensions */
     align-self: flex-start;
 }
