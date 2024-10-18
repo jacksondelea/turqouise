@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Exhibition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/FAVICON Small.png" type="image/x-icon">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <p style="color: #ea52f3">Loading...</p>
+    </div>
+    <div id="main-content" style="display: none;">
+        <div class="sticky-logo">
+            <a href="index.html" class="logo">Turquoise</a>
+        </div>
+        <div class="current-container">
+            <div class="left-container">
+                <div class="image-container">
+                    <img src="images/oct 2024 turqouise cover.jpg" alt="Landing Image" class="header-img">
+                </div>
+                <hr style="color: black; width: 40px; margin-bottom: 20px; margin-left: 0px;">
+
+                <img src="images/lucaszeeberg/241008 TUR 01.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                <img src="images/lucaszeeberg/241008 TUR 10.jpg" alt="Current Exhibition Image 2" class="exhibition-img">
+                <img src="images/lucaszeeberg/241008 TUR 02.jpg" alt="Current Exhibition Image 3" class="exhibition-img">
+                <img src="images/lucaszeeberg/241008 TUR 03.jpg" alt="Current Exhibition Image 4" class="exhibition-img">
+                <img src="images/lucaszeeberg/241008 TUR 04.jpg" alt="Current Exhibition Image 5" class="exhibition-img">
+                <img src="images/lucaszeeberg/241008 TUR 06.jpg" alt="Current Exhibition Image 6" class="exhibition-img">
+                <img src="images/lucaszeeberg/241008 TUR 05.jpg" alt="Current Exhibition Image 7" class="exhibition-img">
+                <img src="images/lucaszeeberg/241008 TUR 07.jpg" alt="Current Exhibition Image 8" class="exhibition-img">
+                <img src="images/lucaszeeberg/241008 TUR 08.jpg" alt="Current Exhibition Image 9" class="exhibition-img">
+                <img src="images/lucaszeeberg/241008 TUR 09.jpg" alt="Current Exhibition Image 10" class="exhibition-img">
+                <img src="images/lucaszeeberg/241008 TUR 11.jpg" alt="Current Exhibition Image 11" class="exhibition-img">
+            </div>
+            <div class="right-container">
+                <div>
+                    <div>Lucas Zeeberg</div>
+                    <div style="font-style: italic;">Conference</div>
+                    <div>July 12 - August 16, 2024</div>
+                    <a class="toggle-text underline" href="images/lucaszeeberg/LZPress release.pdf" target="_blank">Exhibition Text</a>
+                    <div><a class="toggle-text underline" href="images/lucaszeeberg/LZchecklist.pdf" target="_blank">Checklist</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("img");
+            let loadedCount = 0;
+            const totalImages = images.length;
+
+            images.forEach(img => {
+                if (img.complete) {
+                    incrementCounter();
+                } else {
+                    img.addEventListener("load", incrementCounter);
+                    img.addEventListener("error", incrementCounter);
+                }
+            });
+
+            function incrementCounter() {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    document.getElementById("loading-screen").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
 
