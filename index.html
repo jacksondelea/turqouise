@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turquoise</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/images/FAVICON Small.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turquoise</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/images/FAVICON Small.png" type="image/x-icon">
 </head>
 <body>
-    <div id="loading-screen" class="loading-screen">
-        <p style="color: white;">Loading...</p>
+  <div id="loading-screen" class="loading-screen">
+    <p style="color: white;">Loading...</p>
+  </div>
+  <div id="main-content" style="display: none;">
+    <div class="sticky-logo">
+      <a href="index.html" class="logo">Turquoise</a>
     </div>
-    <div id="main-content" style="display: none;">
-        <div class="sticky-logo">
-            <a href="index.html" class="logo">Turquoise</a>
-        </div>
-        <div class="image-container">
-            <!-- Container to ensure image and hr match in width -->
-            <div class="img-hr-container">
-                <a href="upcoming.html"><img src="images/Transmission Tower LA.jpg" alt="Upcoming Exhibition" class="header-img"></a>
-                <hr class="custom-hr">
-            </div>
-        </div>
+    <div class="image-container">
+      <!-- Container to ensure image and hr match in width -->
+      <div class="img-hr-container">
+            <a href="upcoming.html"><img src="images/Transmission Tower LA.jpg" alt="Upcoming Exhibition" class="header-img"></a>
+        <hr class="custom-hr">
+      </div>
     </div>
-    <nav>
-        <ul>
-            <li><a href="previous.html">past</a></li>
-            <li><a href="upcoming.html">upcoming</a></li>
-            <li><a href="about.html">info</a></li>
-        </ul>
-    </nav>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const images = document.querySelectorAll("img");
-            let loadedCount = 0;
-            const totalImages = images.length;
+  </div>
+  <!--ACTION MENU (initially hidden)-->
+  <nav id="action-menu" style="display: none;">
+    <ul>
+      <li><a href="previous.html">previous</a></li>
+      <li><a href="upcoming.html">upcoming</a></li>
+      <li><a href="about.html">info</a></li>
+    </ul>
+  </nav>
 
-            images.forEach(img => {
-                if (img.complete) {
-                    incrementCounter();
-                } else {
-                    img.addEventListener("load", incrementCounter);
-                    img.addEventListener("error", incrementCounter);
-                }
-            });
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Preload images and then show main content
+      const images = document.querySelectorAll("img");
+      let loadedCount = 0;
+      const totalImages = images.length;
 
-            function incrementCounter() {
-                loadedCount++;
-                if (loadedCount === totalImages) {
-                    document.getElementById("loading-screen").style.display = "none";
-                    document.getElementById("main-content").style.display = "block";
-                }
-            }
-        });
-    </script>
+      images.forEach(img => {
+        if (img.complete) {
+          incrementCounter();
+        } else {
+          img.addEventListener("load", incrementCounter);
+          img.addEventListener("error", incrementCounter);
+        }
+      });
+
+      function incrementCounter() {
+        loadedCount++;
+        if (loadedCount === totalImages) {
+          document.getElementById("loading-screen").style.display = "none";
+          document.getElementById("main-content").style.display = "block";
+        }
+      }
+
+      // Once the header image is hovered, display the nav permanently.
+      const headerImg = document.querySelector(".header-img");
+      const actionMenu = document.getElementById("action-menu");
+
+      function showMenu() {
+        actionMenu.style.display = "block";
+        headerImg.removeEventListener("mouseenter", showMenu);
+      }
+      headerImg.addEventListener("mouseenter", showMenu);
+    });
+  </script>
 </body>
 </html>
