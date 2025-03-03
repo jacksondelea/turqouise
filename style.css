@@ -180,7 +180,7 @@ nav ul {
     display: none;  /* Initially hidden */
     opacity: 0;
     transform: translateY(-20px); /* Start above its position */
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.3s ease, transform 0.5s ease;
 }
 
 #action-menu.show {
