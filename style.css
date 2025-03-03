@@ -176,6 +176,20 @@ nav ul {
     border: 1px black solid;
 }
 
+#action-menu {
+    display: none;  /* Initially hidden */
+    opacity: 0;
+    transform: translateY(-20px); /* Start above its position */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#action-menu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Move to its normal position */
+}
+
+
 /* Responsive Styles */
 @media (max-width: 1200px) {
     .left-container {

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Turquoise</title>
   <link rel="stylesheet" href="style.css">
@@ -38,7 +40,7 @@
       const images = document.querySelectorAll("img");
       let loadedCount = 0;
       const totalImages = images.length;
-
+  
       images.forEach(img => {
         if (img.complete) {
           incrementCounter();
@@ -47,7 +49,7 @@
           img.addEventListener("error", incrementCounter);
         }
       });
-
+  
       function incrementCounter() {
         loadedCount++;
         if (loadedCount === totalImages) {
@@ -55,17 +57,22 @@
           document.getElementById("main-content").style.display = "block";
         }
       }
-
-      // Once the header image is hovered, display the nav permanently.
+  
+      // Menu Glide Down Animation
       const headerImg = document.querySelector(".header-img");
       const actionMenu = document.getElementById("action-menu");
-
+  
       function showMenu() {
-        actionMenu.style.display = "block";
+        actionMenu.style.display = "block"; // Ensure it's in the document flow
+        setTimeout(() => {
+          actionMenu.classList.add("show"); // Apply transition
+        }, 10);
         headerImg.removeEventListener("mouseenter", showMenu);
       }
+  
       headerImg.addEventListener("mouseenter", showMenu);
     });
   </script>
+  
 </body>
 </html>
