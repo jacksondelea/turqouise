@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Exhibition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/FAVICON Small.png" type="image/x-icon">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <p style="color: white">Loading...</p>
+    </div>
+    <div id="main-content" style="display: none;">
+        <div class="scroll-wrapper">
+            <div class="sticky-logo">
+                <a href="index.html" class="logo">Turquoise</a>
+            </div>
+            <div class="current-container" style="margin-top: 12px;">
+                <div class="left-container">
+                    <img src="images/diaohowland/TUR DH 1.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned">
+                        <div>Becky Howland</div>
+                        <div><span style="font-style: italic;">Transmission Tower #7</span> 1985</div>
+                        <div><span>Welded steel</span></div>
+                        <div style="margin-bottom: 40px;">75 x 42 x 25.5 inches (191 x 107 x 64 cm)</div>
+
+                    <img src="images/diaohowland/TUR DH 2.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+
+                    <img src="images/diaohowland/TUR DH 3.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+
+                    <img src="images/diaohowland/TUR DH 4.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned">
+                        <div>David Diao</div>
+                        <div><span style="font-style: italic;">Polish Constructivism (Blue 2),</span> 2025</div>
+                        <div><span>Acrylic on canvas</span></div>
+                        <div><span>54 x 42 inches (137 x 107 cm)</span></div>
+                </div>
+
+                <div class="right-container">
+                    <div>
+                        <div>David Diao, Becky Howland</div>
+                        <div>March 1 - April 6, 2025</div>
+                        <a class="toggle-text underline" href="images/diaohowland/David Diao, Becky Howland PR FINAL.pdf" target="_blank">Exhibition Text</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("img");
+            let loadedCount = 0;
+            const totalImages = images.length;
+
+            images.forEach(img => {
+                if (img.complete) {
+                    incrementCounter();
+                } else {
+                    img.addEventListener("load", incrementCounter);
+                    img.addEventListener("error", incrementCounter);
+                }
+            });
+
+            function incrementCounter() {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    document.getElementById("loading-screen").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

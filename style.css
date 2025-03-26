@@ -3,7 +3,6 @@ body {
     margin: 0; /* Remove default margin */
     line-height: 1.1;
     height: 100vh; /* Ensure body takes up full viewport height */
-    overflow: hidden; /* Prevent scrolling on the body */
     padding-left: 30px;
     background-color: white; /* Set background color */
 }
@@ -25,7 +24,6 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: calc(100vh - 40px); /* Adjust height to fill the viewport */
 }
 
 .left-container {
