@@ -34,11 +34,12 @@
       const messageEl = document.getElementById('subscribe-message');
 
       try {
-        const res = await fetch('https://turquoise.onrender.com/subscribe', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams({ email })
+        const res = await fetch('https://script.google.com/macros/s/AKfycbyii2VR1mZDpWd-2pDSGf8Qzao5RHcqOd5SJLVfVjeNpXkJEE2IZ-Gt9tcINaVOf5pL/exec', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({ email })
         });
+
 
         const text = await res.text();
         messageEl.textContent = text;
