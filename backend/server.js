@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../')));
 
 // POST route to handle email submissions
-app.post('https://turquoise.onrender.com/subscribe', (req, res) => {
+app.post('/subscribe', (req, res) => {
     const email = req.body.email;
 
     if (email) {
