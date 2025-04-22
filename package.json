@@ -4,6 +4,7 @@
   "description": "Site for Bennett Smith's gallery Turquoise. Static html",
   "main": "index.js",
   "scripts": {
+    "start": "node backend/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
