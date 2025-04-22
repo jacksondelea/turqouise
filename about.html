@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/images/FAVICON Small.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="/images/FAVICON Small.png" type="image/x-icon" />
 </head>
 <body>
-    <div class="sticky-logo">
-        <a href="index.html" class="logo">Turquoise</a>
-    </div>
-    <nav>
-        <ul>
-            <li>Open Saturdays 12-6 and by appointment</li>
-            <li>Instagram: <a class="underline" href="https://www.instagram.com/turquoise.ent" target="_blank">@turquoise.ent</a></li>
-            <li>Email: bennettdhsmith7@gmail.com</li>
-        </ul>
-    </nav>
+  <div class="sticky-logo">
+    <a href="index.html" class="logo">Turquoise</a>
+  </div>
+  <nav>
+    <ul>
+      <li>Open Saturdays 12-6 and by appointment</li>
+      <li>Instagram: <a class="underline" href="https://www.instagram.com/turquoise.ent" target="_blank">@turquoise.ent</a></li>
+      <li>Email: bennettdhsmith7@gmail.com</li>
+    </ul>
+  </nav>
+  <div class="mailing-list">
+    <div style="padding-bottom: 8px;">Join Our Mailing List!</div>
+    <form id="subscribe-form">
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="subscribe-message" style="margin-top: 10px;"></p>
+  </div>
+
+  <script>
+    document.getElementById('subscribe-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const messageEl = document.getElementById('subscribe-message');
+
+      try {
+        const res = await fetch('/backend/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({ email })
+        });
+
+        const text = await res.text();
+        messageEl.textContent = text;
+        messageEl.style.color = res.ok ? 'green' : 'red';
+        document.getElementById('email').value = ''; // Clear input field
+      } catch (err) {
+        messageEl.textContent = 'There was an error. Please try again later.';
+        messageEl.style.color = 'red';
+      }
+    });
+  </script>
 </body>
 </html>

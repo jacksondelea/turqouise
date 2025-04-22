@@ -1,0 +1,24 @@
+{
+  "name": "turqouise",
+  "version": "1.0.0",
+  "description": "Site for Bennett Smith's gallery Turquoise. Static html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacksondelea/turqouise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacksondelea/turqouise/issues"
+  },
+  "homepage": "https://github.com/jacksondelea/turqouise#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0"
+  }
+}

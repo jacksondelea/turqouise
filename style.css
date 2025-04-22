@@ -11,7 +11,7 @@ body {
     top: 0;
     z-index: 1000;
     padding-top: 36px;
-    padding-bottom: 32px;
+    padding-bottom: 24px;
 }
 
 .scroll-wrapper {
@@ -217,20 +217,7 @@ nav ul {
     }
 }
 
-@media (max-width: 992px) {
-    .left-container, .right-container {
-        width: 100%;
-    }
 
-    .current-container {
-        flex-direction: column;
-    }
-
-    .right-container {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
 
 @media (max-width: 768px) {
 
