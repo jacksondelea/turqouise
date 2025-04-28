@@ -56,17 +56,18 @@ body {
 }
 
 .exhibition-img-captioned {
-    max-width: 100%;
-    max-height: 90%;
     margin-top: 24px;
     margin-bottom: 4px;
+    max-width: 100%;
+    max-height: 90%;
     height: auto;
     object-fit: contain; /* Maintain intrinsic dimensions */
     align-self: flex-start;
 }
 
 .exhibition-img-vert-captioned{
-    height: 540px;
+    max-height: 80vh;
+    max-width: 100%;
     width: auto;
     margin-top: 24px;
     margin-bottom: 4px;
@@ -209,7 +210,7 @@ nav ul {
 /* Responsive Styles */
 @media (max-width: 1200px) {
     .left-container {
-        width: 60%;
+        width: 90vw;
     }
 
     .right-container {
@@ -247,6 +248,7 @@ nav ul {
 
     .left-container {
         order: 1; /* Ensure the left container is below the right container */
+        width: 90vw;
     }
 
     .image-container {
