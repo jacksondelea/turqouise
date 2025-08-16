@@ -24,50 +24,36 @@
                     </div>
                     <hr style="color: black; width: 40px; margin-top: 12px; margin-left: 0px;">
 
-                    <img src="images/duchamp/work 4 install.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
-                    <img src="images/duchamp/work 4 closer install.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned"> 
-                        <div>Marcel Duchamp</div>
-                        <div><span style="font-style: italic;">Bilboquet,</span> 1910/2025</div>
-                        <div>Wooden toy</div>
-                    <img src="images/duchamp/work 4 detail.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned"> 
-                    <img src="images/duchamp/work 4 alternative placement.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
-                    <img src="images/duchamp/work 1 install.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
-                    <img src="images/duchamp/work 1 closer install.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
-                    <img src="images/duchamp/work 1 overview 1.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned"> 
-                        <div>Marcel Duchamp</div>
-                        <div><span style="font-style: italic;">Unhappy Readymade,</span> 1919/2025</div>
-                        <div>Geometry textbook, wire</div>
-                    <img src="images/duchamp/work 1 overview 2.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
-                    <img src="images/duchamp/work 2 install.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
-                    <img src="images/duchamp/work 2 closer install.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
-                    <img src="images/duchamp/work 2 overview.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned"> 
-                        <div>Marcel Duchamp</div>
-                        <div><span style="font-style: italic;">Waistcoat,</span> 1957/2025</div>
-                        <div>Men's waistcoat, custom buttons</div>
-                    <img src="images/duchamp/work 2 detail.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned"> 
-                    <img src="images/duchamp/work 3 install.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
-                    <img src="images/duchamp/work 3 closer install.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
-                    <img src="images/duchamp/work 3 detail.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned"> 
-                        <div>Marcel Duchamp</div>
-                        <div><span style="font-style: italic;">The Locking Spoon</span> or <span style="font-style: italic;">Verrou de surete a la cuiller,</span> 1957/2025</div>
-                        <div>Metal spoon fixed to door lock</div>
-                    <img src="images/duchamp/work 5 install.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
-                    <img src="images/duchamp/work 5 closer install.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
-                    <img src="images/duchamp/work 5 overview.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned"> 
-                        <div>Marcel Duchamp</div>
-                        <div><span style="font-style: italic;">Faux-Vagin,</span> 1962-63/2025</div>
-                        <div>License plate</div>
-                    <img src="images/duchamp/work 5 detail.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                    <img src="images/250805 TUR install 1.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                    <img src="images/250805 TUR install 5.jpg" alt="Current Exhibition Image 1" class="exhibition-img"> 
+                    <img src="images/250805 TUR install 2 a.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned">
+                        <div>Dylan Clark & Ángel Xicohtencatl Espinoza</div>
+                        <div><span style="font-style: italic;">Ahuejote cut (Corte ahuejote). 9g6j3v9; P12DT14H12M/2024-06-29T08:58:00-06:00.
+                        dr5rmwc; 2025-07-31T17:00:00-04:00/P30DT1H0M</span>, 2025</div>
+                        <div>4K video, stereo audio, variable player</div>
+                        <div>Dimensions variable</div>
+                    <img src="images/250805 TUR screen 5.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                    <img src="images/250805 TUR screen 3.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                    <img src="images/250805 TUR screen 4.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                    <img src="images/250805 TUR screen 1.jpg" alt="Current Exhibition Image 1" class="exhibition-img"> 
+                    <img src="images/250805 TUR screen 2.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                    <img src="images/250805 TUR install 3.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                    <img src="images/250805 TUR install 4.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned">
+                        <div>Bongani Khoza</div>
+                        <div><span style="font-style: italic;">Runway One, Rand Airport, Germiston</span>, 2013</div>
+                        <div>Pigment ink on cotton paper</div>
+                        <div>30.5 x 22.8 inches (77.6 x 58 cm)</div>
+                        <div>EA of 2</div>
+                    <img src="images/" alt="Current Exhibition Image 1" class="exhibition-img"> 
                 </div>
 
                 <!-- Right side -->
                 <div class="right-container">
                     <div>
-                        <div style="font-style: italic;">Some Debatable Readymades</div>
-                        <div>May 3 - June 21, 2025</div>
+                        <div style="font-style: italic;">Bongani Khoza / Dylan Clark & Ángel Xicohtencatl Espinoza</div>
+                        <div>August 1 - August 31, 2025</div>
                         <a class="toggle-text underline" href="images/duchamp/Duchamp PR + Checklist.pdf" target="_blank">Exhibition Text</a>
                         <div><a class="toggle-text underline" href="images/duchamp/Duchamp Pamphlet (FOR WEB).pdf" target="_blank">Exhibition Guide</a></div>
-                        <div><a class="toggle-text underline" href="images/duchamp/Manhattan Art Review 06_25.pdf" target="_blank">Kritic's Korner</a></div>
                     </div>
                 </div>
             </div>
