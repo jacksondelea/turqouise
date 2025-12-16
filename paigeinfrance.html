@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paige Labuda - Everyday it's something new</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/FAVICON Small.png" type="image/x-icon">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <p style="color: white">Loading...</p>
+    </div>
+    <div id="main-content" style="display: none;">
+        <div class="scroll-wrapper">
+            <div class="sticky-logo">
+                <a href="index.html" class="logo">Turquoise</a>
+            </div>
+            <div class="current-container">
+
+                <div class="left-container">
+                    <img src="images/P1010182.JPG" class="exhibition-img" style="margin-top: 0px;">
+                    <img src="images/P1010294.JPG" class="exhibition-img">
+                    <img src="images/251103 PAIGE 15.JPG" class="exhibition-img">
+                    <img src="images/P1010329.JPG" class="exhibition-img">
+                    <img src="images/P1010356.JPG" class="exhibition-img">
+                    <img src="images/251103 PAIGE 10.JPG" class="exhibition-img">
+                    <img src="images/P1010353.JPG" class="exhibition-img">
+                    <img src="images/251103 PAIGE 11.JPG" class="exhibition-img">
+                    <img src="images/P1010368.JPG" class="exhibition-img">
+                    <img src="images/251103 PAIGE 9.JPG" class="exhibition-img">
+                    <img src="images/P1010321.JPG" class="exhibition-img">
+                    <img src="images/251103 PAIGE 14.JPG" class="exhibition-img">
+                    <img src="images/P1010395.JPG" class="exhibition-img"> 
+                    <img src="images/P1010342.JPG" class="exhibition-img">
+                    <img src="images/251103 PAIGE 2.JPG" class="exhibition-img">
+                    <img src="images/P1010382.JPG" class="exhibition-img">
+                    <img src="images/251103 PAIGE 12.JPG" class="exhibition-img">
+                    <img src="images/P1010282.JPG" class="exhibition-img">
+                </div>
+                <div class="right-container">
+                    <div>
+                        <div>Paige Labuda</div>
+                        <div style="font-style: italic;">Everyday it's something new</div>
+                        <div>November 15 - 17, 2025</div>
+                        <a class="toggle-text underline" href="images/" target="_blank">Exhibition Text + Checklist</a>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("img");
+            let loadedCount = 0;
+            const totalImages = images.length;
+
+            images.forEach(img => {
+                if (img.complete) {
+                    incrementCounter();
+                } else {
+                    img.addEventListener("load", incrementCounter);
+                    img.addEventListener("error", incrementCounter);
+                }
+            });
+
+            function incrementCounter() {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    document.getElementById("loading-screen").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
