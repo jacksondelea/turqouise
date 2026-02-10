@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joel Dean, A Copy of Metatron</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/FAVICON Small.png" type="image/x-icon">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <p style="color: white">Loading...</p>
+    </div>
+    <div id="main-content" style="display: none;">
+        <div class="scroll-wrapper">
+            <div class="sticky-logo">
+                <a href="index.html" class="logo">Turquoise</a>
+            </div>
+            <div class="current-container">
+                <div class="left-container">
+                    <div class="image-container">
+                        <img src="images/web image joel.JPEG" alt="Landing Image" class="header-img">
+                    </div>
+                    <hr style="width: 36px; margin-top: 24px; color: white; margin-left: 0px; margin-bottom: 0px;">
+
+                    <img src="images/260128 TURQUOISE 01.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+
+                    <img src="images/260128 TURQUOISE 02.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned">
+                        <div>Joel Dean</div>
+                        <div><span style="font-style: italic;">A Copy of Metatron</span>, 2026</div>
+                        <div><span>Perfect-bound paperback book</span></div>
+                        <div><span>5.5 x 7 inches (14 x 17.8 cm)</span></div>
+                        <div>Edition of 350 + 2 AP</div>
+
+                    <img src="images/260128 TURQUOISE 11.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                    <img src="images/260128 TURQUOISE 12.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+
+                    <img src="images/260128 TURQUOISE 08.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned">
+                        <div><span style="font-style: italic;">Metatron</span>, by Sol Yurick</div>
+                        <div><span>Published by Semiotext(e), 1985</span></div>
+                    <img src="images/260128 TURQUOISE 10.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                </div>
+
+                <div class="right-container">
+                    <div>
+                        <div>Joel Dean</div>
+                        <div style="font-style: italic;">A Copy of Metatron</div>
+                        <div>January 29 - March 1, 2026</div>
+                        <a class="toggle-text underline" href="images/Metatron PR (4).pdf" target="_blank">Press Release</a>
+                        <div><a class="toggle-text underline" href="images/Metatron Checklist.pdf" target="_blank">Checklist</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("img");
+            let loadedCount = 0;
+            const totalImages = images.length;
+
+            images.forEach(img => {
+                if (img.complete) {
+                    incrementCounter();
+                } else {
+                    img.addEventListener("load", incrementCounter);
+                    img.addEventListener("error", incrementCounter);
+                }
+            });
+
+            function incrementCounter() {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    document.getElementById("loading-screen").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
