@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's Afraid of ____ ?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/FAVICON Small.png" type="image/x-icon">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <p style="color: white">Loading...</p>
+    </div>
+    <div id="main-content" style="display: none;">
+        <div class="scroll-wrapper">
+            <div class="sticky-logo">
+                <a href="index.html" class="logo">Turquoise</a>
+            </div>
+            <div class="current-container">
+             <!-- Left side -->
+                <div class="left-container">
+                    <div class="image-container">
+                        <img src="images/Image for website.jpg" alt="Landing Image" class="header-img">
+                    </div>
+                    <hr style="color: black; width: 40px; margin-top: 12px; margin-left: 0px;">
+
+                <div class="left-container">
+                    <img src="images/Image-15.jpg" class="exhibition-img" style="margin-top: 0px;">
+                    <img src="images/Image-12.jpg" class="exhibition-img">
+                    <img src="images/Image-14.jpg" class="exhibition-img">
+                    <img src="images/Image-13.jpg" class="exhibition-img">
+                    <img src="images/Install-3.jpg" class="exhibition-img">
+                    <img src="images/Image-7.jpg" class="exhibition-img">
+                    <img src="images/Image-5.jpg" class="exhibition-img">
+                    <img src="images/Image-6.jpg" class="exhibition-img">
+                    <img src="images/Image-11.jpg" class="exhibition-img">
+                    <img src="images/Image-10.jpg" class="exhibition-img">
+                    <img src="images/Image-9.jpg" class="exhibition-img">
+                    <img src="images/Image-8.jpg" class="exhibition-img">
+                    <img src="images/Install-2.jpg" class="exhibition-img"> 
+                    <img src="images/Image-3.jpg" class="exhibition-img">
+                    <img src="images/Image-4.JPG" class="exhibition-img">
+                    <img src="images/Image-2.jpg" class="exhibition-img">
+                    <img src="images/Image-1.jpg" class="exhibition-img">
+                    <img src="images/Image-17.jpg" class="exhibition-img">
+                    <img src="images/Image-19.jpg" class="exhibition-img">
+                    <img src="images/Image-20.jpg" class="exhibition-img">
+                    <img src="images/Image-21.jpg" class="exhibition-img">
+                    <img src="images/Image-22.jpg" class="exhibition-img">
+                    <img src="images/Image-23.jpg" class="exhibition-img">
+                </div>
+                <div class="right-container">
+                    <div>
+                        <div style="font-style: italic;">Who's Afraid of ____ ?</div>
+                        <div>In collaboration with Hans Goodrich, Chicago</div>
+                        <div>March 27 - May 10, 2026</div>
+                        <a class="toggle-text underline" href="images/" target="_blank">Press Release + Checklist</a>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("img");
+            let loadedCount = 0;
+            const totalImages = images.length;
+
+            images.forEach(img => {
+                if (img.complete) {
+                    incrementCounter();
+                } else {
+                    img.addEventListener("load", incrementCounter);
+                    img.addEventListener("error", incrementCounter);
+                }
+            });
+
+            function incrementCounter() {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    document.getElementById("loading-screen").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
