@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad Reinhardt: The End of Art is Not The End</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/FAVICON Small.png" type="image/x-icon">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <p style="color: white">Loading...</p>
+    </div>
+    <div id="main-content" style="display: none;">
+        <div class="scroll-wrapper">
+            <div class="sticky-logo">
+                <a href="index.html" class="logo">Turquoise</a>
+            </div>
+            <div class="current-container">
+             <!-- Left side -->
+                <div class="left-container">
+                    <div class="image-container">
+                        <img src="images/Screenshot 2026-09-06 at 5.48.07 PM.png" alt="Landing Image" class="header-img">
+                    </div>
+                    <hr style="color: black; width: 40px; margin-top: 12px; margin-left: 0px;">
+
+                    <img src="images/01.jpg" class="exhibition-img" style="margin-top: 0px;">
+                    <img src="images/02.jpg" class="exhibition-img">
+                    <img src="images/03.jpg" class="exhibition-img">
+                    <img src="images/04.jpg" class="exhibition-img">
+                    <img src="images/05.jpg" class="exhibition-img">
+                    <img src="images/06.jpg" class="exhibition-img">
+                    <img src="images/individual 1.jpg" class="exhibition-img">
+                    <img src="images/individual 1.jpg" class="exhibition-img">
+                    <img src="images/individual 3.jpg" class="exhibition-img">
+                    <img src="images/individual 4.jpg" class="exhibition-img">
+                    <img src="images/System ID 1976_Frame 21, 1946_RECTO_DZ copy 2.jpg" class="exhibition-img">
+                    <img src="images/System ID 1380_Frame 59, 1946_RECTO_DZ copy 2.jpg" class="exhibition-img">
+                    <img src="images/System ID 1362_Frame 41, 1946_RECTO_DZ copy.jpg" class="exhibition-img">
+                    <img src="images/individual 2.jpg" class="exhibition-img"> 
+                    <img src="images/individual 2 copy.jpg" class="exhibition-img">
+                    <img src="images/09.jpg" class="exhibition-img">
+                    <img src="images/09 copy.jpg" class="exhibition-img">
+                    <img src="images/05.jpg" class="exhibition-img">
+                    <img src="images/System ID 1991_Frame 36, circa1943–47_RECTO_DZ copy 2.jpg" class="exhibition-img">
+                   
+                </div>
+                <div class="right-container">
+                    <div>
+                        <div>Ad Reinhardt</div>
+                        <div style="font-style: italic;">The End of Art is Not The End</div>
+                        <div>September 19 - November 1, 2026</div>
+                        <div>Curated by Karen Fan and Jo Kim</div>
+                        <a class="toggle-text underline" href="images/Copy of Reinhardt PR.pdf" target="_blank">Press Release</a>  
+                        <div><a class="toggle-text underline" href="images/AD CHECKLIST.pdf" target="_blank">Checklist</a></div>
+                        <div><a class="toggle-text underline" href="images/" target="_blank">The New York Times</a></div>
+                        <div><a class="toggle-text underline" href="images/" target="_blank">Kritic's Korner</a></div>                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("img");
+            let loadedCount = 0;
+            const totalImages = images.length;
+
+            images.forEach(img => {
+                if (img.complete) {
+                    incrementCounter();
+                } else {
+                    img.addEventListener("load", incrementCounter);
+                    img.addEventListener("error", incrementCounter);
+                }
+            });
+
+            function incrementCounter() {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    document.getElementById("loading-screen").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
