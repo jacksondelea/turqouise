@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madeline Casteel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/FAVICON Small.png" type="image/x-icon">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <p style="color: white">Loading...</p>
+    </div>
+    <div id="main-content" style="display: none;">
+        <div class="scroll-wrapper">
+            <div class="sticky-logo">
+                <a href="index.html" class="logo">Turquoise</a>
+            </div>
+            <div class="current-container">
+                <div class="left-container">
+                    <div class="image-container">
+                        <img src="images/IMG_1562.JPG" alt="Landing Image" class="header-img">
+                    </div>
+                    <hr style="width: 36px; margin-top: 24px; color: white; margin-left: 0px; margin-bottom: 0px;">
+
+                    <img src="images/Job_2451-1.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                    <img src="images/Job_2467-1.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+
+                    <img src="images/Job_2492-1.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned">
+                        <div>Madeline Casteel</div>
+                        <div><span style="font-style: italic;">Caricature</span>, 2026</div>
+                        <div><span>Oil on linen</span></div>
+                        <div><span>32 x 52 inches (81.2 x 132 cm)</span></div>
+
+                    <img src="images/Job_2473-1.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+
+                    <img src="images/Job_2515-1.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned">
+                        <div>Madeline Casteel</div>
+                        <div><span style="font-style: italic;">Landscape (after Poussin)</span>, 2026</div>
+                        <div><span>Oil on linen</span></div>
+                        <div><span>28 x 51 inches (71.2 x 129.5 cm)</span></div>
+
+                    <img src="images/Job_2527-1.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                    <img src="images/Job_2529-1.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+
+                    <img src="images/Job_2517-1.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned">
+                        <div>Madeline Casteel</div>
+                        <div><span style="font-style: italic;">Landscape (after Poussin)</span>, 2026</div>
+                        <div><span>Oil on linen</span></div>
+                        <div><span>28 x 51 inches (71.2 x 129.5 cm)</span></div>
+
+                    <img src="images/Job_2525-1.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                    <img src="images/Job_2524-1.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                    <img src="images/Job_2463-1.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+
+                    <img src="images/Job_2501-1.jpg" alt="Current Exhibition Image 1" class="exhibition-img-captioned">
+                        <div>Madeline Casteel</div>
+                        <div><span style="font-style: italic;">Stone Bridge</span>, 2026</div>
+                        <div><span>Coin residue, gesso on canvas</span></div>
+                        <div><span>18 x 24 inches (45.7 x 70 cm)</span></div>
+
+                    <img src="images/Job_2505-1.jpg" alt="Current Exhibition Image 1" class="exhibition-img">
+                </div>
+
+                <div class="right-container">
+                    <div>
+                        <div>Madeline Casteel</div>
+                        <div>November 7 - December 12, 2026</div>
+                        <a class="toggle-text underline" href="images/MC_PR  (2).pdf" target="_blank">Press Release + Checklist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("img");
+            let loadedCount = 0;
+            const totalImages = images.length;
+
+            images.forEach(img => {
+                if (img.complete) {
+                    incrementCounter();
+                } else {
+                    img.addEventListener("load", incrementCounter);
+                    img.addEventListener("error", incrementCounter);
+                }
+            });
+
+            function incrementCounter() {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    document.getElementById("loading-screen").style.display = "none";
+                    document.getElementById("main-content").style.display = "block";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
